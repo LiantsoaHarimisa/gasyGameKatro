@@ -1,0 +1,234 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, rgb(165, 93, 51),rgb(236, 161, 74),rgb(248, 231, 212));   
+}
+
+
+#page1, .tableJeu{
+    background-image: url("a.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:cover;
+    margin: 10% auto;
+    width: 40%;
+    display: block;
+    border-radius: 5px;
+}
+
+.titre{
+    width: 100%;
+}
+
+#page1 h1, #page2 h1{
+    width: 70%;
+    text-align: center;
+    display: inline-block;
+    font-size: 28px;
+    margin-left: 15%;
+    color: rgb(116, 58, 11);
+}
+
+
+
+#help, #help1{
+    background-color: white;
+    border: 2px solid rgb(116, 58, 11);
+    color: rgb(116, 58, 11);
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+
+#formulaire{
+    margin: 2% auto;
+    width:90%;
+}
+
+#formulaire label{
+    display: inline-block;
+    width: 20%;
+    margin: 2%;
+    font-size: 20px;
+    color: rgb(116, 58, 11);
+}
+
+#userName1, #userName2{
+    width: 70%;
+    height: 50px;
+    outline: none;
+    background-color: rgba(250, 228, 202, 0.9);
+    border: 1px solid rgba(235, 190, 139,0.9);
+    border-radius: 5px;
+    margin: 2%;
+}
+
+#bouton, #bouton1{
+    color: rgb(116, 58, 11);
+    font-weight: 300;
+    width: 40%;
+    height: 50px;
+    background-color: rgb(235, 190, 139);
+    border: 1px solid rgb(243, 207, 167);
+    border-radius: 5px;
+    margin: 3% 30%;
+}
+
+#page2{
+    display: none;
+    margin: 12% auto;
+    border-radius: 5px;
+    width: 40%;
+    display: block;
+    border: 1px solid rgba(105, 102, 101, 0.5);
+    box-shadow: 0px 0px 20px 0px rgb(134, 113, 80);
+    background-image: url("a.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:cover;
+    
+}
+
+#formulaire1{
+    margin: 1.5% auto;
+    width:50%;
+}
+
+#formulaire1 label{
+    background-color: rgba(250, 228, 202, 0.9);
+    font-size: 20px;
+    color: rgb(116, 58, 11);
+}
+
+#nbCase{
+    outline: none;
+    color: black;
+    width: 100%;
+    height: 50px;
+    background-color:rgba(250, 228, 202, 0.9);
+    border: 1px solid rgba(235, 190, 139,0.9);
+    border-radius: 5px;
+    margin: 2% auto;
+} 
+
+#page3{
+    width: 70%;
+    display: none;
+    margin: 3.5% auto;
+}
+
+#page3 h1{
+    color: rgb(116, 58, 11);
+    text-align: center;
+}
+
+#tables{
+    margin: 2% auto;
+    width: 70%;
+    height: 380px;
+    border-radius: 10px;
+    background-image: url("a.jpg"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:cover;
+}
+
+.separation{
+    width: 98%;
+    height: 5px;
+    margin-top: -200px;
+    margin-left: 1%;
+    background-color: rgb(116, 58, 11);
+}
+
+#tabJoueur{
+    width: 100%;
+    margin: 2% auto;
+}
+
+#joueur1, #joueur2{
+    width: 90%;
+    margin: 2.5% auto;
+}
+
+table button{
+    background-color: rgb(240, 178, 121);
+    border: 1px solid rgb(240, 178, 121);
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+.détails{
+    width: 25%;
+    margin: 2% auto;
+}
+
+#tableScore{
+    width: 100%;
+}
+
+#tableScore tr{
+    height: 50px;
+}
+
+#recommencer{
+    color: white;
+    width: 100%;
+    height: 10%;
+    border: 1px solid rgb(116, 58, 11);
+    background-color: rgb(116, 58, 11);
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+#messageErreur{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#messageErreur1{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#modal, #modal1{
+    text-align: center;
+    width: 60%;
+    background-color: rgba(105, 62, 26, 0.9);
+    border-radius: 5px;
+    border: 2px solid rgba(105, 62, 26, 0.9);
+    color: rgb(221, 192, 149);
+}
+
+#modal ul, #modal1 ul{
+    list-style-type: none;
+    font-size: 20px;
+}
+
+ul li p{
+    font-size: 18px;
+}
+
+#closeButton, #closeButton1{
+    border: 2px solid rgb(221, 192, 149);
+    background-color: rgba(105, 62, 26, 0.5);
+    color: rgb(221, 192, 149);
+    width: 150px;
+    height: 40px;
+}
+
+#closeButton:hover , #closeButton1:hover{
+    border: 2px solid rgba(105, 62, 26);
+    background-color: rgb(221, 192, 149);  
+    color:  rgba(105, 62, 26);
+    transform: scale(1.1);
+}

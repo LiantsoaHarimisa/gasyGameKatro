@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Katro</title>
+</head>
+<body>
+    <div id="page1">
+        <div class="titre">
+            <h1>Katro !</h1>
+            <button id="help">?</button>
+
+            <dialog id="modal">
+                <h2>La règle du Katro!</h2>
+                <ul>
+                    <li>But de jeu    
+                        <p>Ce jeu se pratique sur un plateua de 4 lignes, un nombre variable de colonnes, et avec 2 garaines ou pions par cupule ou case au départ.
+                            Les joueurs jouent à tour de rôle après avoir décidé qui commence.
+                            Le camp de chaque joueur est constitué des deux lignes face à lui.
+                            Il déplace ses graines en semant dans son camp et prend dans l'autre camp. Les graines prises ne sont pas retirées du plateau, mais changent simplement de côté. 
+                        </p>
+                        <p>Le but est de s'emparer de toute les graines de l'autre joueur en les récupérant dans son camp</p>
+                    </li>
+                    <li>Semis
+                        <p>A chaque coup, le joueur prend toutes les graines d'une  de ses cupules et les sème dans son camp, à raison d'une graine par cupule, avec la sens de rotation de l'horloge
+                           Si le semis s'achève dans une cupule qui était vide (mandry), le coup du joueur est terminé et c'est à l'adversaire de jouer.  
+                           Dans le cas contraire, toutes les graines de la cupule de fin du semis sont prises par le joueur et il recommence un nouveau semis élémentaire dans le même sens.
+                        </p>
+                    </li>
+                    <li>Prises
+                        <p>Si, de plus, un semis élémentaire se termine sur la ligne du joueur la plus proche de l'autre camp, alors les graines de la cupule de l'adversaire sur la ligne intérieure de celui-ci et dans la même colonne 
+                            que la case de fin sont prises par le joueur et ajoutées aux graines de sa case de fin, et constituent la nouvelle collection à semer dans un nouveau semis élémentaire.
+                            Si toutes les cupules de la ligne intérieure de l'adversaire sont vides, alors le joueur prend les graines de la cupule de la ligne d'éxtérieure de l'adversaire,
+                            pourvu que cette cupule soit dans la même colonne.
+                            Il peut y avoir plusieurs semis élémentaires et plusieurs prises de graines à chaque coup. 
+                        </p>
+                    </li>
+                </ul>
+                
+                <button id="closeButton">Fermer</button>
+            </dialog>
+
+            <script>
+                var myButton = document.getElementById("help");
+                var myModal = document.getElementById("modal");
+                var closeButton = document.getElementById("closeButton");
+
+                myButton.addEventListener("click", function() {
+                    myModal.showModal();
+                });
+
+                closeButton.addEventListener("click", function() {
+                    myModal.close();
+                });
+            </script>
+        </div>
+        <form method= "GET" id="formulaire">
+            <label for="userName1">Joueur 1</label>
+            <input type="text" id="userName1">
+            <br>
+            <label for="userName2">Joueur 2</label>
+            <input type="text" id="userName2">
+            <br>
+            <div id="messageErreur"> </div>
+            <input type="submit" value="Valider" id="bouton">
+        </form>
+    </div>
+
+    <div id="page2" style="display: none;">
+        <div class="titre">
+            <h1>Commençons le jeu !</h1>
+            <button id="help1">?</button>
+            
+            <dialog id="modal1">
+                <h2>La règle du Katro!</h2>
+                <ul>
+                    <li>But de jeu    
+                        <p>Ce jeu se pratique sur un plateua de 4 lignes, un nombre variable de colonnes, et avec 2 garaines ou pions par cupule ou case au départ.
+                            Les joueurs jouent à tour de rôle après avoir décidé qui commence.
+                            Le camp de chaque joueur est constitué des deux lignes face à lui.
+                            Il déplace ses graines en semant dans son camp et prend dans l'autre camp. Les graines prises ne sont pas retirées du plateau, mais changent simplement de côté. 
+                        </p>
+                        <p>Le but est de s'emparer de toute les graines de l'autre joueur en les récupérant dans son camp</p>
+                    </li>
+                    <li>Semis
+                        <p>A chaque coup, le joueur prend toutes les graines d'une  de ses cupules et les sème dans son camp, à raison d'une graine par cupule, avec la sens de rotation de l'horloge
+                           Si le semis s'achève dans une cupule qui était vide (mandry), le coup du joueur est terminé et c'est à l'adversaire de jouer.  
+                           Dans le cas contraire, toutes les graines de la cupule de fin du semis sont prises par le joueur et il recommence un nouveau semis élémentaire dans le même sens.
+                        </p>
+                    </li>
+                    <li>Prises
+                        <p>Si, de plus, un semis élémentaire se termine sur la ligne du joueur la plus proche de l'autre camp, alors les graines de la cupule de l'adversaire sur la ligne intérieure de celui-ci et dans la même colonne 
+                            que la case de fin sont prises par le joueur et ajoutées aux graines de sa case de fin, et constituent la nouvelle collection à semer dans un nouveau semis élémentaire.
+                            Si toutes les cupules de la ligne intérieure de l'adversaire sont vides, alors le joueur prend les graines de la cupule de la ligne d'éxtérieure de l'adversaire,
+                            pourvu que cette cupule soit dans la même colonne.
+                            Il peut y avoir plusieurs semis élémentaires et plusieurs prises de graines à chaque coup. 
+                        </p>
+                    </li>
+                </ul>
+                
+                <button id="closeButton1">Fermer</button>
+            </dialog>
+            
+            <script>
+                var myButton1 = document.getElementById("help1");
+                var myModal1 = document.getElementById("modal1");
+                var closeButton1 = document.getElementById("closeButton1");
+
+                myButton1.addEventListener("click", function() {
+                    myModal1.showModal();
+                });
+
+                closeButton1.addEventListener("click", function() {
+                    myModal1.close();
+                });
+            </script>
+        </div>
+        <form method= "GET" id="formulaire1">
+            <label for="nbCase">Combien de case voulez-vous?Veuillez entrer une valeur comprise entre 4 et 7</label>
+            <br>
+            <input type="number" id="nbCase">
+            <br>
+            <div id="messageErreur1"></div>
+            <input type="submit" value="Commencer" id="bouton1">
+        </form>
+    </div>
+    
+    <div id="page3">
+        <div id="tables">
+            <table id="tabJoueur"></table> 
+            <div class="separation"></div>     
+        </div>
+        <div class= "détails">
+            <table id="tableScore"  ></table>
+            <!--button id="recommencer">Recommencer</button-->
+        </div>
+    </div>
+</body>
+</html>
